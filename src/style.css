@@ -80,6 +80,7 @@ video {
 
 .nav__button:hover {
   transform: translateY(-5px);
+  cursor: pointer;
 }
 
 /*
@@ -145,6 +146,7 @@ video {
 
 .home-info-container__view-menu-button:hover {
   transform: translateY(-5px);
+  cursor: pointer;
 }
 
 /*
@@ -154,3 +156,27 @@ video {
 .home__hero-img {
   width: 100%;
 }
+
+/*
+  ----- FOOTER -----
+*/
+
+.footer {
+  margin: auto 0 2rem 0;
+}
+
+.git-hub-link__img {
+  position: absolute;
+  z-index: 5;
+}
+
+.git-hub-link__img,
+.git-hub-link__img-hover {
+  width: 50px;
+  height: auto;
+}
+
+/*
+TO DO
+Add github hover styles
+*/

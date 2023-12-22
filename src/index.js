@@ -1,2 +1,2 @@
 import "./style.css";
-console.log("Webpack is working");
+import saladHeroImg from "./assets/salad-hero-img.jpg";

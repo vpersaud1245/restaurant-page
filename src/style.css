@@ -140,6 +140,11 @@ video {
   border: none;
   border-radius: 2em;
   width: fit-content;
+  transition: 500ms;
+}
+
+.home-info-container__view-menu-button:hover {
+  transform: translateY(-5px);
 }
 
 /*

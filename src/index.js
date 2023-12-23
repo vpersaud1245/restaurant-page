@@ -3,8 +3,8 @@ import { renderHeader } from "./header";
 import { renderHomePage } from "./home";
 import { renderFooter } from "./footer";
 
-renderHeader();
-renderHomePage();
+// renderHeader();
+// // renderHomePage();
 renderFooter();
 
 /** TO DO

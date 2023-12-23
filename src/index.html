@@ -5,5 +5,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title><%= htmlWebpackPlugin.options.title %></title>
   </head>
-  <body></body>
+  <body>
+    <header class="header">
+      <nav>
+        <button class="nav__button nav__button--home-button">Home</button>
+        <button class="nav__button nav__button--menu-button">Menu</button>
+        <button class="nav__button nav__button--contact-button">Contact</button>
+      </nav>
+    </header>
+    <main class="main">
+      <div class="contact-container">
+        <div class="contact-container__contact-info">
+          <div class="contact-info__section">
+            <div class="contact-info-section__label">Phone Number</div>
+            <div class="contact-info-section__details--pri-color">
+              555-555-5555
+            </div>
+          </div>
+          <div class="contact-info__section">
+            <div class="contact-info-section__label">Email</div>
+            <div class="contact-info-section__details--pri-color">
+              saladpack@gmail.com
+            </div>
+          </div>
+          <div class="contact-info__section">
+            <div class="contact-info-section__label">Location</div>
+            <div class="contact-info-section__details">
+              4774 Haymond Rocks Road, Rogue River, Oregon
+            </div>
+          </div>
+          <div class="contact-info__section">
+            <div class="contact-info-section__label">Opening Hours</div>
+            <div class="contact-info-section__details">8AM-9PM</div>
+          </div>
+        </div>
+
+        <form action="javascript:void(0);" class="contact-form">
+          <h1 class="form-title">Send us a message</h1>
+          <input
+            type="text"
+            class="form__input form__input--email"
+            placeholder="Email Address"
+          />
+          <textarea
+            name="form__message"
+            class="form__input form__input--message"
+            cols="30"
+            rows="8"
+            placeholder="How can we help?"
+          ></textarea>
+          <button class="form__submit-button" type="submit">Send</button>
+        </form>
+      </div>
+    </main>
+  </body>
 </html>

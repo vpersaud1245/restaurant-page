@@ -69,13 +69,13 @@ video {
 .nav__button--home-button {
   border-radius: 35px 0 0 35px;
   padding-right: 35px;
-  margin-right: 3px;
+  margin-right: 5px;
 }
 
 .nav__button--contact-button {
   border-radius: 0 35px 35px 0;
   padding-left: 35px;
-  margin-left: 3px;
+  margin-left: 5px;
 }
 
 .nav__button:hover {

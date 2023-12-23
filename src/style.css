@@ -171,7 +171,7 @@ video {
 }
 
 .git-hub-link__img,
-.git-hub-link__img-hover {
+.git-hub-link__img--hover {
   width: 50px;
   height: auto;
 }

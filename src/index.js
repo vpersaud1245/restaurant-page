@@ -1,10 +1,10 @@
 import "./style.css";
 import { createHeader } from "./header";
+import { createFooter } from "./footer";
 import saladImg from "./assets/salad-hero-img.png";
-import gitHubLogo from "./assets/github-mark.svg";
-import gitHubLogoHover from "./assets/github-mark-hover.svg";
 
 createHeader();
+createFooter();
 
 // const saladHeroImg = document.createElement("img");
 // saladHeroImg.src = saladImg;
@@ -12,21 +12,3 @@ createHeader();
 
 // const homeContainer = document.querySelector(".home-container");
 // homeContainer.append(saladHeroImg);
-
-// const gitHubLogoLink = document.createElement("a");
-// gitHubLogoLink.classList.add("footer__git-hub-link");
-// gitHubLogoLink.href = "https://github.com/vpersaud1245";
-// gitHubLogoLink.target = "_blank";
-
-// const gitHubLogoImg = document.createElement("img");
-// gitHubLogoImg.src = gitHubLogo;
-// gitHubLogoImg.classList.add("git-hub-link__img");
-// gitHubLogoLink.append(gitHubLogoImg);
-
-// const gitHubLogoImgHover = document.createElement("img");
-// gitHubLogoImgHover.src = gitHubLogoHover;
-// gitHubLogoImgHover.classList.add("git-hub-link__img-hover");
-// gitHubLogoLink.append(gitHubLogoImgHover);
-
-// const footer = document.querySelector(".footer");
-// footer.append(gitHubLogoLink);

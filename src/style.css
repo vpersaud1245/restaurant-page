@@ -83,6 +83,10 @@ video {
   cursor: pointer;
 }
 
+.current {
+  background-color: var(--primary-color);
+}
+
 /*
   ----- MAIN -----
 */

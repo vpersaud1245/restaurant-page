@@ -8,7 +8,11 @@ const createHeader = () => {
 
   // ADD ELEMENT CLASSES
   header.classList.add("header");
-  homeButton.classList.add("nav__button", "nav__button--home-button");
+  homeButton.classList.add(
+    "nav__button",
+    "nav__button--home-button",
+    "current"
+  );
   menuButton.classList.add("nav__button", "nav__button--menu-button");
   contactButton.classList.add("nav__button", "nav__button--contact-button");
 

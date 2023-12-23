@@ -26,7 +26,8 @@ const createFooter = () => {
   gitHubLink.append(gitHubLogoImg);
   gitHubLink.append(gitHubLogoImgHover);
 
-  // APPEND LINK TO FOOTER AND FOOTER TO BODY
+  // APPEND LINK TO FOOTER
+  // & FOOTER TO BODY
   footer.append(gitHubLink);
   document.body.append(footer);
 };

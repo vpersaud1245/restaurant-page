@@ -1,11 +1,11 @@
 import "./style.css";
-import { createHeader } from "./header";
-import { createHomePage } from "./home";
-import { createFooter } from "./footer";
+import { renderHeader } from "./header";
+import { renderHomePage } from "./home";
+import { renderFooter } from "./footer";
 
-createHeader();
-createHomePage();
-createFooter();
+renderHeader();
+renderHomePage();
+renderFooter();
 
 /** TO DO
  * Add github icon hover animation

@@ -1,7 +1,7 @@
 import gitHubLogo from "./assets/github-mark.svg";
 import gitHubLogoHover from "./assets/github-mark-hover.svg";
 
-const createFooter = () => {
+const renderFooter = () => {
   // CREATE FOOTER ELEMENTS
   const footer = document.createElement("footer");
   const gitHubLink = document.createElement("a");
@@ -32,4 +32,4 @@ const createFooter = () => {
   document.body.append(footer);
 };
 
-export { createFooter };
+export { renderFooter };

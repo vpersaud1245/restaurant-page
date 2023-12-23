@@ -1,6 +1,6 @@
 import saladImg from "./assets/salad-hero-img.png";
 
-const createHomePage = () => {
+const renderHomePage = () => {
   // CREATE HOME PAGE ELEMENTS
   const main = document.createElement("main");
   const homeContainer = document.createElement("div");
@@ -50,4 +50,4 @@ const createHomePage = () => {
   document.body.appendChild(main);
 };
 
-export { createHomePage };
+export { renderHomePage };

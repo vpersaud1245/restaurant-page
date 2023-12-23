@@ -1,4 +1,4 @@
-const createHeader = () => {
+const renderHeader = () => {
   // CREATE HEADER ELEMENTS
   const header = document.createElement("header");
   const nav = document.createElement("nav");
@@ -29,4 +29,4 @@ const createHeader = () => {
   document.body.appendChild(header);
 };
 
-export { createHeader };
+export { renderHeader };

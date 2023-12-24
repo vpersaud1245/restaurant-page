@@ -29,4 +29,44 @@ const renderHeader = () => {
   document.body.appendChild(header);
 };
 
-export { renderHeader };
+// ADD NAV BUTTON EVENT LISTNERS
+
+const navButtons = document.querySelectorAll(".nav__button");
+
+navButtons.forEach((navButton) => {
+  navButton.addEventListener("click", switchPageTab);
+});
+
+// NAV BUTTON CLICK EVENT HELPER FUNCTIONS
+
+/*
+switchPageTab(e) {
+  let tabToRender = e.target.textContent;
+  clear main tab 
+
+}
+
+renderSelectedTab(tabToRender) {
+  if contact page {
+    render contact page 
+    return
+  }
+
+  if home page {
+    render home page
+    return
+  }
+
+  if menu page {
+    render menu page
+    return
+  }
+}
+*/
+
+function clearMainSection() {
+  const main = document.querySelector(".main");
+  main.innerHTML = "";
+}
+
+export { renderHeader, clearMainSection };

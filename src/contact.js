@@ -57,11 +57,13 @@ const createContactInfo = () => {
 };
 
 /**
- *
- * @param {*} labelText - The text for the label in the section
- * @param {*} detailText - The text for the section detail
- * @param {*} detailTextColor - The color of the detail text ('pri' - for primary color), ('sec' - for default color)
- * @returns {HTMLDivElement} - The completed contact info section
+ *Creates an instance of a section of the contact info block
+ * @param {*} labelText
+ * The text for the label in the section
+ * @param {*} detailText
+ * The text for the section detail
+ * @param {*} detailTextColor
+ * The color of the detail text ('pri' - for primary color), ('sec' - for default color)
  */
 const createContactInfoSection = (labelText, detailText, detailTextColor) => {
   // CREATE SECTION ELEMENTS

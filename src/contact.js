@@ -162,7 +162,7 @@ const createContactFormSection = () => {
   // SET MESSAGE INPUT ATTRIBUTES
   message.name = "form_message";
   message.cols = "30";
-  message.row = "8";
+  message.rows = "8";
   message.placeholder = "How can we help?";
 
   // SET SUBMIT BUTTON ATTRIBUTES AND TEXT

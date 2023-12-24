@@ -7,8 +7,8 @@ import { renderContactPage } from "./contact";
 
 renderHeader();
 createMainElement();
-// renderContactPage();
-renderHomePage();
+renderContactPage();
+// renderHomePage();
 renderFooter();
 
 /** TO DO

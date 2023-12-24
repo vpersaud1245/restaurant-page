@@ -4,8 +4,8 @@ export const renderContactPage = () => {
 
   // CREATE CONTACT PAGE ELEMENTS
   const contactContainer = document.createElement("div");
-  const contactInfoSection = createContactInfoSection();
-  const contactFormSection = createContactFormSection();
+  const contactInfoSection = createContactInfo();
+  const contactFormSection = createContactForm();
 
   // ADD ELEMENT CLASS
   contactContainer.classList.add("contact-container");
@@ -20,13 +20,29 @@ export const renderContactPage = () => {
   ----- CREATE CONTACT-INFO SECTION -----
 */
 
-const createContactInfoSection = () => {
+const createContactInfo = () => {
   // CREATE SECTION ELEMENTS
   const contactInfoSection = document.createElement("div");
-  const phoneNumberSection = createPhoneNumberSection();
-  const emailSection = createEmailSection();
-  const locationSection = createLocationSection();
-  const openingHoursSection = createOpeningHoursSection();
+  const phoneNumberSection = createContactInfoSection(
+    "Phone Number",
+    "(555)-555-5555",
+    "pri"
+  );
+  const emailSection = createContactInfoSection(
+    "Email Address",
+    "saladpack@gmail.com",
+    "pri"
+  );
+  const locationSection = createContactInfoSection(
+    "Location",
+    "4774 Haymond Rocks Road, Rogue River, Oregon",
+    "sec"
+  );
+  const openingHoursSection = createContactInfoSection(
+    "Opening Hours",
+    "8AM - 9PM",
+    "sec"
+  );
 
   // ADD ELEMENT CLASSES
   contactInfoSection.classList.add("contact-container__contact-info");
@@ -40,92 +56,36 @@ const createContactInfoSection = () => {
   return contactInfoSection;
 };
 
-const createPhoneNumberSection = () => {
+/**
+ *
+ * @param {*} labelText - The text for the label in the section
+ * @param {*} detailText - The text for the section detail
+ * @param {*} detailTextColor - The color of the detail text ('pri' - for primary color), ('sec' - for default color)
+ * @returns {HTMLDivElement} - The completed contact info section
+ */
+const createContactInfoSection = (labelText, detailText, detailTextColor) => {
   // CREATE SECTION ELEMENTS
-  const phoneNumberSection = document.createElement("div");
-  const phoneNumberLabel = document.createElement("div");
-  const phoneNumberDetail = document.createElement("div");
+  const section = document.createElement("div");
+  const label = document.createElement("div");
+  const detail = document.createElement("div");
 
   // ADD ELEMENT CLASSES
-  phoneNumberSection.classList.add("contact-info__section");
-  phoneNumberLabel.classList.add("contact-info-section__label");
-  phoneNumberDetail.classList.add("contact-info-section__details--pri-color");
+  section.classList.add("contact-info__section");
+  label.classList.add("contact-info-section__label");
+  detail.classList.add("contact-info-section__details");
+  if (detailTextColor === "pri") {
+    detail.classList.add("contact-info-section__details--pri-color");
+  }
 
-  // ADD PHONE NUMBER LABEL AND DETAIL TEXT
-  phoneNumberLabel.textContent = "Phone Number";
-  phoneNumberDetail.textContent = "(555)-555-5555";
+  // ADD TEXT TO LABEL AND DETAIL
+  label.textContent = labelText;
+  detail.textContent = detailText;
 
-  // APPEND ELEMENTS TO DOM
-  phoneNumberSection.appendChild(phoneNumberLabel);
-  phoneNumberSection.appendChild(phoneNumberDetail);
+  // APPEND LABEL AND DETAIL TO SECTION
+  section.appendChild(label);
+  section.appendChild(detail);
 
-  return phoneNumberSection;
-};
-
-const createEmailSection = () => {
-  // CREATE SECTION ELEMENTS
-  const emailSection = document.createElement("div");
-  const emailLabel = document.createElement("div");
-  const emailDetail = document.createElement("div");
-
-  // ADD ELEMENT CLASSES
-  emailSection.classList.add("contact-info__section");
-  emailLabel.classList.add("contact-info-section__label");
-  emailDetail.classList.add("contact-info-section__details--pri-color");
-
-  // ADD EMAIL LABEL AND DETAIL TEXT
-  emailLabel.textContent = "Email";
-  emailDetail.textContent = "saladpack@gmail.com";
-
-  // APPEND ELEMENTS TO DOM
-  emailSection.appendChild(emailLabel);
-  emailSection.appendChild(emailDetail);
-
-  return emailSection;
-};
-
-const createLocationSection = () => {
-  // CREATE SECTION ELEMENTS
-  const locationSection = document.createElement("div");
-  const locationLabel = document.createElement("div");
-  const locationDetail = document.createElement("div");
-
-  // ADD ELEMENT CLASSES
-  locationSection.classList.add("contact-info__section");
-  locationLabel.classList.add("contact-info-section__label");
-  locationDetail.classList.add("contact-info-section__details");
-
-  // ADD LOCATION LABEL AND DETAIL TEXT
-  locationLabel.textContent = "Location";
-  locationDetail.textContent = "4774 Haymond Rocks Road, Rogue River, Oregon";
-
-  // APPEND ELEMENTS TO DOM
-  locationSection.appendChild(locationLabel);
-  locationSection.appendChild(locationDetail);
-
-  return locationSection;
-};
-
-const createOpeningHoursSection = () => {
-  // CREATE SECTION ELEMENTS
-  const openingHoursSection = document.createElement("div");
-  const openingHoursLabel = document.createElement("div");
-  const openingHoursDetail = document.createElement("div");
-
-  // ADD ELEMENT CLASSES
-  openingHoursSection.classList.add("contact-info__section");
-  openingHoursLabel.classList.add("contact-info-section__label");
-  openingHoursDetail.classList.add("contact-info-section__details");
-
-  // ADD OPENING HOURS LABEL AND DETAIL TEXT
-  openingHoursLabel.textContent = "Opening Hours";
-  openingHoursDetail.textContent = "8AM-9PM";
-
-  // APPEND ELEMENTS TO DOM
-  openingHoursSection.appendChild(openingHoursLabel);
-  openingHoursSection.appendChild(openingHoursDetail);
-
-  return openingHoursSection;
+  return section;
 };
 
 /* ----- END CONTACT-INFO SECTION ----- */
@@ -134,7 +94,7 @@ const createOpeningHoursSection = () => {
   ----- CREATE CONTACT FORM SECTION -----
 */
 
-const createContactFormSection = () => {
+const createContactForm = () => {
   // CREATE SECTION ELEMENTS
   const contactForm = document.createElement("form");
   const formTitle = document.createElement("h1");

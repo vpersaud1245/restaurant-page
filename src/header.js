@@ -1,3 +1,6 @@
+import { renderContactPage } from "./contact";
+import { renderHomePage } from "./home";
+
 const renderHeader = () => {
   // CREATE HEADER ELEMENTS
   const header = document.createElement("header");
@@ -8,11 +11,7 @@ const renderHeader = () => {
 
   // ADD ELEMENT CLASSES
   header.classList.add("header");
-  homeButton.classList.add(
-    "nav__button",
-    "nav__button--home-button",
-    "current"
-  );
+  homeButton.classList.add("nav__button", "nav__button--home-button");
   menuButton.classList.add("nav__button", "nav__button--menu-button");
   contactButton.classList.add("nav__button", "nav__button--contact-button");
 
@@ -27,46 +26,75 @@ const renderHeader = () => {
   nav.appendChild(contactButton);
   header.appendChild(nav);
   document.body.appendChild(header);
+
+  // APPEND NAV BUTTON EVENT LISTENER
+  const navButtons = document.querySelectorAll(".nav__button");
+  navButtons.forEach((navButton) => {
+    navButton.addEventListener("click", (e) => {
+      handleNavButtonClick(e, navButtons);
+    });
+  });
 };
 
-// ADD NAV BUTTON EVENT LISTNERS
-
-const navButtons = document.querySelectorAll(".nav__button");
-
-navButtons.forEach((navButton) => {
-  navButton.addEventListener("click", switchPageTab);
-});
-
-// NAV BUTTON CLICK EVENT HELPER FUNCTIONS
-
 /*
-switchPageTab(e) {
-  let tabToRender = e.target.textContent;
-  clear main tab 
+  ----- NAV BUTTON CLICK HANDLER -----
+*/
+const handleNavButtonClick = (e, navButtons) => {
+  let selectedTab = e.target.textContent;
+  clearMainSection();
+  resetNavButtonColors(navButtons);
+  renderSelectedTab(selectedTab);
+  // Render tab after resetting btn colors as active btn color is applied on page render function
+};
 
-}
-
-renderSelectedTab(tabToRender) {
-  if contact page {
-    render contact page 
-    return
-  }
-
-  if home page {
-    render home page
-    return
-  }
-
-  if menu page {
-    render menu page
-    return
-  }
-}
+/* 
+  ----- NAV BUTTON CLICK HANDLER HELPER FUNCTIONS -----
 */
 
-function clearMainSection() {
+const clearMainSection = () => {
   const main = document.querySelector(".main");
   main.innerHTML = "";
-}
+};
 
-export { renderHeader, clearMainSection };
+const resetNavButtonColors = (navButtons) => {
+  navButtons.forEach((navButton) => {
+    if (navButton.classList.contains("active")) {
+      navButton.classList.remove("active");
+    }
+  });
+};
+
+const renderSelectedTab = (tabToRender) => {
+  if (tabToRender === "Contact") {
+    renderContactPage();
+    return;
+  }
+  if (tabToRender === "Home") {
+    renderHomePage();
+    return;
+  }
+  // if menu page {render menu page;return;}
+};
+
+/* 
+  ----- SET ACTIVE NAV BUTTON COLOR FUNCTIONS -----
+*/
+
+const setActiveNavButton = (navButtonName) => {
+  let navButton = findNavButtonFromName(navButtonName);
+  navButton.classList.add("active");
+};
+
+const findNavButtonFromName = (navButtonName) => {
+  if (navButtonName === "Home") {
+    return document.querySelector(".nav__button--home-button");
+  }
+  if (navButtonName === "Menu") {
+    return document.querySelector(".nav__button--menu-button");
+  }
+  if (navButtonName === "Contact") {
+    return document.querySelector(".nav__button--contact-button");
+  }
+};
+
+export { renderHeader, setActiveNavButton };

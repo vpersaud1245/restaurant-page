@@ -83,7 +83,7 @@ video {
   cursor: pointer;
 }
 
-.current {
+.active {
   background-color: var(--primary-color);
 }
 

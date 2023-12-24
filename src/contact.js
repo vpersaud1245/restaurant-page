@@ -1,3 +1,5 @@
+import { setActiveNavButton } from "./header";
+
 export const renderContactPage = () => {
   // GET MAIN SECTION
   const main = document.querySelector(".main");
@@ -14,6 +16,9 @@ export const renderContactPage = () => {
   contactContainer.appendChild(contactInfoSection);
   contactContainer.appendChild(contactFormSection);
   main.appendChild(contactContainer);
+
+  // SET CONTACT NAV BUTTON TO ACTIVE
+  setActiveNavButton("Contact");
 };
 
 /* 

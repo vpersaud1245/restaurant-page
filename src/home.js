@@ -1,4 +1,5 @@
 import saladImg from "./assets/salad-hero-img.png";
+import { setActiveNavButton } from "./header";
 
 const renderHomePage = () => {
   // GET MAIN SECTION
@@ -49,6 +50,9 @@ const renderHomePage = () => {
   homeInfoContainer.appendChild(homeInfoContainerContent);
   homeInfoContainer.appendChild(viewMenuButton);
   main.appendChild(homeContainer);
+
+  // SET HOME NAV BUTTON TO ACTIVE
+  setActiveNavButton("Home");
 };
 
 export { renderHomePage };

@@ -1,8 +1,10 @@
 import saladImg from "./assets/salad-hero-img.png";
 
 const renderHomePage = () => {
+  // GET MAIN SECTION
+  const main = document.querySelector(".main");
+
   // CREATE HOME PAGE ELEMENTS
-  const main = document.createElement("main");
   const homeContainer = document.createElement("div");
   const homeInfoContainer = document.createElement("div");
   const homeInfoContainerTitle = document.createElement("h1");
@@ -14,7 +16,6 @@ const renderHomePage = () => {
   const saladHeroImg = document.createElement("img");
 
   // ADD ELEMENT CLASSES
-  main.classList.add("main");
   homeContainer.classList.add("home-container");
   homeInfoContainer.classList.add("home__info-container");
   homeInfoContainerTitle.classList.add("home-info-container__title");
@@ -37,17 +38,17 @@ const renderHomePage = () => {
   saladHeroImg.src = saladImg;
 
   // APPEND <SPAN> ELEMENTS TO TITLE - Individual words will allow different word colors
-  homeInfoContainerTitle.appendChild(titleWordSalad, titleWordPack);
+  homeInfoContainerTitle.appendChild(titleWordSalad);
+  homeInfoContainerTitle.appendChild(titleWordPack);
 
   // APPEND ELEMENTS TO DOM
-  main.appendChild(homeContainer);
   homeContainer.appendChild(homeInfoContainer);
   homeContainer.appendChild(saladHeroImg);
   homeInfoContainer.appendChild(homeInfoContainerTitle);
   homeInfoContainer.appendChild(homeInfoContainerCaption);
   homeInfoContainer.appendChild(homeInfoContainerContent);
   homeInfoContainer.appendChild(viewMenuButton);
-  document.body.appendChild(main);
+  main.appendChild(homeContainer);
 };
 
 export { renderHomePage };

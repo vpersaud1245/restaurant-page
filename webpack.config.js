@@ -18,7 +18,7 @@ module.exports = {
   devtool: "source-map",
   plugins: [
     new HtmlWebpackPlugin({
-      title: "Restaurant Page",
+      title: "My Restaurant Page",
       template: "src/index.html",
     }),
   ],

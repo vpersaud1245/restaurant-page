@@ -5,5 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title><%= htmlWebpackPlugin.options.title %></title>
   </head>
-  <body></body>
+  <body>
+    <header class="header">
+      <nav>
+        <button class="nav__button nav__button--home-button">Home</button>
+        <button class="nav__button nav__button--menu-button">Menu</button>
+        <button class="nav__button nav__button--contact-button">Contact</button>
+      </nav>
+    </header>
+    <main class="main">
+      <div class="menu">
+        <div class="menu__item">
+          <div class="menu-item__img-border">
+            <img class="menu-item__item-img" src="" alt="chicken-ramen-img" />
+          </div>
+          <div class="menu-item__info">
+            <p class="menu-item-info__item-name">Chicken Ramen</p>
+            <p class="menu-item-info__item-calories">380 calories</p>
+            <p class="menu-item-info__item-price">$9.99</p>
+          </div>
+        </div>
+        <div class="menu__item">
+          <div class="menu-item__img-border">
+            <img class="menu-item__item-img" src="" alt="pork-ramen-img" />
+          </div>
+          <div class="menu-item__info">
+            <p class="menu-item-info__item-name">Chicken Ramen</p>
+            <p class="menu-item-info__item-calories">380 calories</p>
+            <p class="menu-item-info__item-price">$9.99</p>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
 </html>

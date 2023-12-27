@@ -7,6 +7,7 @@
   --btn-text-color: #303030;
   --primary-color: #bdfa7b;
   --secondary-color: #d6d6be;
+  --menu-item-box-shadow-color: rgba(32, 32, 32, 0.75);
 }
 
 /*
@@ -268,7 +269,7 @@ video {
   gap: 50px;
   border-radius: 200px;
   padding: 10px 20px 10px 10px;
-  box-shadow: 0px 0px 20px 3px rgba(32, 32, 32, 0.75);
+  box-shadow: 0px 0px 20px 3px var(--menu-item-box-shadow-color);
 }
 
 .menu-item__img-border {

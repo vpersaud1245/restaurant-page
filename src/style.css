@@ -142,6 +142,7 @@ video {
 .home-info-container__view-menu-button {
   background-color: var(--primary-color);
   color: var(--btn-text-color);
+  box-shadow: 0px 0px 20px 3px var(--menu-item-box-shadow-color);
   padding: 20px 30px;
   border: none;
   border-radius: 2em;

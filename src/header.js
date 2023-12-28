@@ -105,4 +105,9 @@ const findNavButtonFromName = (navButtonName) => {
   }
 };
 
-export { renderHeader, setActiveNavButton };
+export {
+  renderHeader,
+  setActiveNavButton,
+  clearMainSection,
+  resetNavButtonColors,
+};

@@ -1,5 +1,10 @@
 import ramenImg from "./assets/ramen-hero-img.svg";
-import { setActiveNavButton } from "./header";
+import {
+  setActiveNavButton,
+  clearMainSection,
+  resetNavButtonColors,
+} from "./header";
+import { renderMenuPage } from "./menu";
 
 const renderHomePage = () => {
   // GET MAIN SECTION
@@ -53,6 +58,19 @@ const renderHomePage = () => {
 
   // SET HOME NAV BUTTON TO ACTIVE
   setActiveNavButton("Home");
+
+  // APPEND EVENT LISTENERS
+  viewMenuButton.addEventListener("click", handleMenuButtonClick);
+};
+
+/*
+  ----- EVENT LISTENER FUNCTIONS -----
+*/
+const handleMenuButtonClick = () => {
+  const navButtons = document.querySelectorAll(".nav__button");
+  clearMainSection();
+  resetNavButtonColors(navButtons);
+  renderMenuPage();
 };
 
 export { renderHomePage };

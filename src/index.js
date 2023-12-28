@@ -9,11 +9,6 @@ createMainElement();
 renderHomePage();
 renderFooter();
 
-// let menuItemImgChicken = document.querySelector("[alt='chicken-ramen-img'");
-// menuItemImgChicken.src = chickenRamenImg;
-
-// let menuItemPork = document.querySelector("[alt='pork-ramen-img'");
-// menuItemPork.src = porkRamenImg;
 /** TO DO
  * Add github icon hover animation
  * Rename HTML title in webpack config to "Restaurant Page" when complete

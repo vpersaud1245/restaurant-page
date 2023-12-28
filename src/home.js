@@ -1,4 +1,4 @@
-import saladImg from "./assets/salad-hero-img.png";
+import ramenImg from "./assets/ramen-hero-img.svg";
 import { setActiveNavButton } from "./header";
 
 const renderHomePage = () => {
@@ -28,7 +28,7 @@ const renderHomePage = () => {
   saladHeroImg.classList.add("home__hero-img");
 
   // ADD TEXT CONTENT TO ELEMENTS
-  titleWordSalad.textContent = "Salad";
+  titleWordSalad.textContent = "Ramen";
   titleWordPack.textContent = "Pack";
   homeInfoContainerCaption.textContent = "Your top spot for healthy salads";
   homeInfoContainerContent.textContent =
@@ -36,7 +36,7 @@ const renderHomePage = () => {
   viewMenuButton.textContent = "Check our Menu";
 
   // ADD HERO IMG SOURCE
-  saladHeroImg.src = saladImg;
+  saladHeroImg.src = ramenImg;
 
   // APPEND <SPAN> ELEMENTS TO TITLE - Individual words will allow different word colors
   homeInfoContainerTitle.appendChild(titleWordSalad);

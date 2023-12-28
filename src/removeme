@@ -5,3 +5,17 @@
     <button class="nav__button nav__button--contact-button">Contact</button>
   </nav>
 </header> -->
+<main class="main">
+  <div class="menu">
+    <div class="menu__item">
+      <div class="menu-item__img-border">
+        <img class="menu-item__item-img" src="" alt="chicken-ramen-img" />
+      </div>
+      <div class="menu-item__info">
+        <p class="menu-item-info__item-name">Chicken Ramen</p>
+        <p class="menu-item-info__item-calories">380 calories</p>
+        <p class="menu-item-info__item-price">$9.99</p>
+      </div>
+    </div>
+  </div>
+</main>

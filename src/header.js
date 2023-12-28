@@ -80,6 +80,10 @@ const renderSelectedTab = (tabToRender) => {
   ----- SET ACTIVE NAV BUTTON COLOR FUNCTIONS -----
 */
 
+/**
+ * Change the nav button background color from default to active
+ * @param {*} navButtonName - "Home/Menu/Contact"
+ */
 const setActiveNavButton = (navButtonName) => {
   let navButton = findNavButtonFromName(navButtonName);
   navButton.classList.add("active");

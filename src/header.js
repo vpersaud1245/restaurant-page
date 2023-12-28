@@ -42,9 +42,12 @@ const renderHeader = () => {
 */
 const handleNavButtonClick = (e, navButtons) => {
   let selectedTab = e.target.textContent;
-  clearMainSection();
-  resetNavButtonColors(navButtons);
-  renderSelectedTab(selectedTab);
+  pageFadeOut();
+  setTimeout(() => {
+    clearMainSection();
+    resetNavButtonColors(navButtons);
+    renderSelectedTab(selectedTab);
+  }, 300);
   // Render tab after resetting btn colors as active btn color is applied on page render function
 };
 
@@ -78,6 +81,11 @@ const renderSelectedTab = (tabToRender) => {
     renderMenuPage();
     return;
   }
+};
+
+const pageFadeOut = () => {
+  const page = document.querySelector(".main div:first-child");
+  page.classList.add("hidden");
 };
 
 /* 

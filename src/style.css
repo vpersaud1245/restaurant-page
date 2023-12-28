@@ -44,6 +44,30 @@ video {
   max-width: 100%;
 }
 
+/* 
+  ----- PAGE FADE UTILITY CLASSES -----
+*/
+
+/* Fade out */
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s 300ms, opacity 300ms linear;
+}
+
+/* 
+  ----- ANIMATIONS -----
+*/
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 /*
   ----- HEADER -----
 */
@@ -94,6 +118,11 @@ video {
 
 .main {
   width: 80%;
+}
+
+/* Add fade in animation to main pages*/
+.main div:first-child {
+  animation: fadeIn 1s;
 }
 
 /*

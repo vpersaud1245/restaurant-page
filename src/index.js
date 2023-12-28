@@ -3,15 +3,9 @@ import { renderHeader } from "./header";
 import { createMainElement } from "./mainElement";
 import { renderHomePage } from "./home";
 import { renderFooter } from "./footer";
-import { renderContactPage } from "./contact";
-import { renderMenuPage } from "./menu";
-
-import porkRamenImg from "./assets/ramen-images/pork-ramen.jpg";
 
 renderHeader();
 createMainElement();
-// renderMenuPage();
-// renderContactPage();
 renderHomePage();
 renderFooter();
 
@@ -25,4 +19,7 @@ renderFooter();
  * Rename HTML title in webpack config to "Restaurant Page" when complete
  * Add menu to renderTab function on navButton event listener
  * Rebrand to Ramen
+ * Add hover effect to menu-item
+ * Add best seller and cut cost features
+ * Add fade out to page
  */

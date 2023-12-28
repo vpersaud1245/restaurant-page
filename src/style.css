@@ -5,7 +5,7 @@
 :root {
   --main-bg-color: #303030;
   --btn-text-color: #303030;
-  --primary-color: #eb3743;
+  --primary-color: #ff6465;
   --secondary-color: #d6d6be;
   --menu-item-box-shadow-color: rgba(32, 32, 32, 0.75);
 }
@@ -272,6 +272,11 @@ video {
   border-radius: 200px;
   padding: 10px 20px 10px 10px;
   box-shadow: 0px 0px 20px 3px var(--menu-item-box-shadow-color);
+}
+
+.menu__item:hover {
+  box-shadow: 0px 0px 20px 3px var(--primary-color);
+  cursor: pointer;
 }
 
 .menu-item__img-border {

@@ -35,7 +35,7 @@ const createContactInfo = () => {
   );
   const emailSection = createContactInfoSection(
     "Email Address",
-    "saladpack@gmail.com",
+    "ramenpack@gmail.com",
     "pri"
   );
   const locationSection = createContactInfoSection(

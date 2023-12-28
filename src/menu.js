@@ -63,7 +63,7 @@ export const renderMenuPage = () => {
   mainElement.appendChild(menu);
 
   // SET MENU NAV BUTTON TO ACTIVE
-  setActiveNavButton(Menu);
+  setActiveNavButton("Menu");
 };
 
 const createMenuItem = (

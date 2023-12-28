@@ -1,5 +1,6 @@
 import { renderContactPage } from "./contact";
 import { renderHomePage } from "./home";
+import { renderMenuPage } from "./menu";
 
 const renderHeader = () => {
   // CREATE HEADER ELEMENTS
@@ -73,7 +74,10 @@ const renderSelectedTab = (tabToRender) => {
     renderHomePage();
     return;
   }
-  // if menu page {render menu page;return;}
+  if (tabToRender === "Menu") {
+    renderMenuPage();
+    return;
+  }
 };
 
 /* 

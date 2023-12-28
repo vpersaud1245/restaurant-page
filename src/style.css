@@ -316,13 +316,16 @@ video {
   margin: auto 0 2rem 0;
 }
 
-.git-hub-link__img {
+.git-hub-link__img--non-hover {
   position: absolute;
   z-index: 5;
 }
 
-.git-hub-link__img,
 .git-hub-link__img--hover {
+  transition: 400ms;
+}
+
+.git-hub-link__img {
   width: 50px;
   height: auto;
 }
